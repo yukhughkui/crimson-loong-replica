@@ -7,7 +7,7 @@
 - **完整视频（从头到尾）**：[kunpeng-film.mp4](video/kunpeng-film.mp4) · [直接下载](https://raw.githubusercontent.com/yukhughkui/crimson-loong-replica/main/video/kunpeng-film.mp4)
 
 网页版是交互式的：空格暂停/继续，点击页面开启合成配乐，也可以拖到任意时刻（地址栏加 `?t=24&pause`），甚至在控制台里用 `window.__film.setTime(24.6)` 精确跳帧。
-如果不想摆弄网页、只想一口气从头看到尾，直接看上面的视频就行。
+如果不想摆弄网页、只想一口气从头看到尾，直接看上面的视频就行（视频为无声版，合成配乐请在网页版点击开启）。
 
 ![破水瞬间](shots/final_v12_24.6.png)
 

@@ -1499,7 +1499,9 @@ const Creature = (() => {
          float split=tip*pow(abs(sin(vUv.y*3.14159*18.)),.8)*.020;
          float edge=1.-.12*pow(abs(v),3.)-split;
          vec3 base=vec3(.48,.58,.68)*vShade;
-         base*=.80+.26*pow(shaft,.7); base+=barb; base*=edge;
+         // shaft 在羽缘插值时可能微负；pow(负,.7) 在 NVIDIA 驱动上返回 NaN，
+         // 会被 clLight 放大成亮绿色网格（SwiftShader 会把负底数截断为 0，掩盖此问题）。
+         base*=.80+.26*pow(max(shaft,0.),.7); base+=barb; base*=edge;
          base*=.90+.14*vUv.x;
          // 各向异性丝光：视线绕羽轴方向的镜面亮带，模拟羽毛丝的定向反射
          vec3 Vw=normalize(cameraPosition-vW);
