@@ -1,0 +1,25 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>鲲鹏 · 一场由代码生成的化形</title>
+<style>
+html,body{margin:0;width:100%;height:100%;background:#05070c;overflow:hidden}
+canvas#c{position:fixed;inset:0;width:100vw;height:100vh;display:block}
+#veil{position:fixed;inset:0;pointer-events:none;z-index:2;background:radial-gradient(ellipse at 50% 45%,transparent 45%,rgba(3,6,12,.42) 100%)}
+#ld{position:fixed;inset:0;z-index:6;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 60%,#10202e 0%,#05070c 72%);color:#c9d8e4;transition:opacity 1s ease}
+#ld b{font:500 clamp(52px,10vw,96px)/1 "Songti SC","STSong","Noto Serif SC",serif;letter-spacing:.22em;color:#dfeaf2;text-shadow:0 0 50px rgba(150,200,235,.35)}
+#ld i{font:500 11px/1 system-ui,sans-serif;letter-spacing:.36em;opacity:.5;font-style:normal;margin-top:20px;text-transform:uppercase}
+#bar{width:min(260px,60vw);height:1px;background:rgba(201,216,228,.16);margin:30px 0 14px;position:relative;overflow:hidden}
+#bar s{position:absolute;left:0;top:0;height:1px;width:0;background:#9fd4f0;box-shadow:0 0 10px #9fd4f0;transition:width .2s}
+#st{font:500 10px/1 system-ui,sans-serif;letter-spacing:.22em;opacity:.5;text-transform:uppercase;min-height:12px}
+#hud{position:fixed;left:0;right:0;bottom:0;z-index:4;pointer-events:none;color:#dbe8f2;opacity:0;transition:opacity .8s;font:500 11px/1.5 system-ui,sans-serif;letter-spacing:.08em;padding:0 20px 18px;display:flex;justify-content:space-between;align-items:flex-end}
+#hud .l{opacity:.6;max-width:65vw}
+#hud .r{pointer-events:auto;cursor:pointer;border:1px solid rgba(219,232,242,.28);border-radius:999px;padding:8px 14px;background:rgba(8,16,26,.4);backdrop-filter:blur(6px)}
+#err{position:fixed;inset:auto 0 50% 0;z-index:9;text-align:center;color:#c9d8e4;font:14px/1.8 system-ui,sans-serif;display:none}
+</style></head><body>
+<canvas id="c"></canvas><div id="veil"></div>
+<div id="ld"><b>鲲鹏</b><i>Kun · Peng — a film written in code</i><div id="bar"><s></s></div><div id="st">waking</div></div>
+<div id="hud"><div class="l">鲲鹏 · 纯 three.js / 零素材 / 几何、纹理、云与音符皆由代码生成</div><div class="r" id="snd">点击开启声音 · 空格暂停</div></div>
+<div id="err"></div>
+<script>{{THREE}}</script>
+<script>
+{{APP}}
+</script></body></html>
